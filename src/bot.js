@@ -274,7 +274,7 @@ class TelegramBot {
     });
 
     // Экранирование специальных символов MarkdownV2
-    processed = processed.replace(/([_\[\]()~>#+=|{}.!\\-])/g, "\\$1");
+    processed = processed.replace(/([_*\[\]()~>#+=|{}.!\\-])/g, "\\$1");
 
     // Восстановить жирный текст (**text** → *text*)
     processed = processed.replace(/\\\*\\\*(.*?)\\\*\\\*/g, "*$1*");
