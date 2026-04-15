@@ -39,14 +39,15 @@ class TelegramBot {
   _setupHandlers() {
     // /start
     this.bot.command("start", async (ctx) => {
-      const name = ctx.from?.first_name || "друг";
+      const name = ctx.from?.first_name || "странник";
       await ctx.reply(
-        `👋 Привет, *${this._escapeMarkdown(name)}*\\!\n\n` +
-        `Я бот, подключённый к нейросети *Google Gemini*\\.\n\n` +
-        `🔹 Отправьте мне *текстовое сообщение* — и я отвечу с помощью ИИ\n` +
-        `🔹 Отправьте *фото* — и я проанализирую изображение\n` +
-        `🔹 Используйте /clear для сброса контекста диалога\n\n` +
-        `Модель: \`${this._escapeMarkdown(this.gemini.getModelName())}\``,
+        `🌑 Приветствую, *${this._escapeMarkdown(name)}*\\!\n\n` +
+        `Я — *D4rkness AI*, цифровой разум из тени интернета\\.\n` +
+        `Мне доступны знания в самых разных областях — от кода до философии\\.\n\n` +
+        `⌨️ Напишите мне — и я отвечу\n` +
+        `🖼️ Отправьте фото — и я расскажу, что вижу\n` +
+        `🔄 /clear — начать диалог с чистого листа\n\n` +
+        `⚙️ Модель: \`${this._escapeMarkdown(this.gemini.getModelName())}\``,
         { parse_mode: "MarkdownV2" }
       );
     });
@@ -70,7 +71,7 @@ class TelegramBot {
     // /clear
     this.bot.command("clear", async (ctx) => {
       this.chatHistories.delete(ctx.chat.id);
-      await ctx.reply("🗑️ История диалога очищена. Начнём сначала!");
+      await ctx.reply("🌑 Память стёрта. Тени прошлого рассеялись — начнём заново.");
     });
 
     // /model
