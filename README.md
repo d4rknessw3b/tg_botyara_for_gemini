@@ -27,7 +27,7 @@
 ### 1. Клонируйте репозиторий
 
 ```bash
-https://github.com/d4rknessw3b/tg_botyara_for_gemini.git
+git clone https://github.com/d4rknessw3b/tg_botyara_for_gemini.git
 cd tg_botyara_for_gemini
 ```
 
