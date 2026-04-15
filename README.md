@@ -27,8 +27,8 @@
 ### 1. Клонируйте репозиторий
 
 ```bash
-git clone https://github.com/your-username/tg-gemini-bot.git
-cd tg-gemini-bot
+https://github.com/d4rknessw3b/tg_botyara_for_gemini.git
+cd tg_botyara_for_gemini
 ```
 
 ### 2. Установите зависимости
